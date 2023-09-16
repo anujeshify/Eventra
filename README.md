@@ -1,5 +1,5 @@
-[!IMPORTANT]
-Although the basic structure and functionality is working, This project still needs certain improvements and fixes.
+> **IMPORTANT**
+> Although the basic structure and functionality is working, This project still needs certain improvements and fixes.
 
 # Eventra (Event Management Database)
 
@@ -31,14 +31,14 @@ This software project is developed with the help of certain programs which facil
 2. Locate the "project" folder within this repository and copy it. Then, paste it into the "htdocs" folder located in the root directory of your XAMPP installation.
 
 3. Launch the XAMPP Control Panel application.
-![alt text](https://github.com/anujeshify/Entertainment-Rating-Database-ERDb/blob/master/Extras/logowhite.png)
+![alt text](https://github.com/anujeshify/Eventra-An-Event-Management-System/blob/main/Help1.jpg)
 
 4. Start both the MySQL and Apache modules by clicking the "Start" button under the "Actions" tab.
 
 5. Access the MySQL Admin interface by clicking the "Admin" button corresponding to the MySQL module.
 
 6. Create a new database and name it "project."
-![alt text](https://github.com/anujeshify/Entertainment-Rating-Database-ERDb/blob/master/Extras/logowhite.png)
+![alt text](https://github.com/anujeshify/Eventra-An-Event-Management-System/blob/main/Help2.png)
 
 7. Navigate to the "Import" tab located in the toolbar above.
 
@@ -89,16 +89,16 @@ The back end of Eventra is powered by the following technology:
 ## Output Pictures
 
 1. Home Page
-![alt text](https://github.com/anujeshify/Entertainment-Rating-Database-ERDb/blob/master/Extras/logowhite.png)
+![alt text](https://github.com/anujeshify/Eventra-An-Event-Management-System/blob/main/Output1.png)
 
 1. Login Page
-![alt text](https://github.com/anujeshify/Entertainment-Rating-Database-ERDb/blob/master/Extras/logowhite.png)
+![alt text](https://github.com/anujeshify/Eventra-An-Event-Management-System/blob/main/Output2.png)
 
 1. Services Page
-![alt text](https://github.com/anujeshify/Entertainment-Rating-Database-ERDb/blob/master/Extras/logowhite.png)
+![alt text](https://github.com/anujeshify/Eventra-An-Event-Management-System/blob/main/Output3.png)
 
 1. Caterers Page
-![alt text](https://github.com/anujeshify/Entertainment-Rating-Database-ERDb/blob/master/Extras/logowhite.png)
+![alt text](https://github.com/anujeshify/Eventra-An-Event-Management-System/blob/main/Output4.png)
 
 
 ## Authors
@@ -107,7 +107,7 @@ The back end of Eventra is powered by the following technology:
 * **Vanshika Gupta** - [VanshikaaGuptaa](https://github.com/VanshikaaGuptaa)
 * **Atish Ranjan Mahali** [atishmahali](https://github.com/atishmahali)
 
-See also the list of [contributors](https://github.com/anujeshify/Vertigo-Airlines_Algorithm-Visualisation-of-Real-World-Problems/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/anujeshify/Eventra-An-Event-Management-System/graphs/contributors) who participated in this project.
 
 
 ## Acknowledgments
