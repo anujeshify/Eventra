@@ -1,0 +1,204 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 16, 2023 at 04:58 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `project`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `caterer`
+--
+
+CREATE TABLE `caterer` (
+  `cat_id` int(8) DEFAULT NULL,
+  `cat_name` varchar(7) DEFAULT NULL,
+  `cat_contact` bigint(10) DEFAULT NULL,
+  `cat_rating` int(1) DEFAULT NULL,
+  `comp_id` int(8) DEFAULT NULL,
+  `cat_price` int(7) DEFAULT NULL,
+  `cat_review` varchar(207) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `caterer`
+--
+
+INSERT INTO `caterer` (`cat_id`, `cat_name`, `cat_contact`, `cat_rating`, `comp_id`, `cat_price`, `cat_review`) VALUES
+(30015688, 'Rajesh', 7317899318, 8, 78443891, 800000, '\"We had to choose from a list of caterers and the thing that sold us on this caterer was the unique snacks, so good! We received compliments from guests during the wedding about how good the food was\"'),
+(30015689, 'Sanjay', 8917896168, 5, 78443894, 450000, '\"They were very helpful through the past year of wedding planning! Always answering my many questions and helping me decide what style of food I wanted! All of our guests loved the food except some of them.\"'),
+(30015690, 'Brajesh', 8847762885, 9, 78443892, 1000000, '\"WOW just WOW! Food is a very important part and this team is truly the best. From appetizers to dessert/late night bites you and your guest will be extremely happy with their service\"'),
+(30015691, 'Manu', 6127918047, 6, 78443891, 56000, '\"The food was amazing! Everyone who attended couldn’t say enough about the quality and freshness of the food.\"'),
+(30015692, 'Chandu', 6748939813, 7, 78443892, 750000, '\"Food was an important part of the wedding day for my fiancé and I. Thank you to Brajesh who helped us create our custom menu from beginning to end\"');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `client_bill`
+--
+
+CREATE TABLE `client_bill` (
+  `bill_id` int(7) DEFAULT NULL,
+  `clientid` int(8) DEFAULT NULL,
+  `bookingid` int(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `client_bill`
+--
+
+INSERT INTO `client_bill` (`bill_id`, `clientid`, `bookingid`) VALUES
+(9967432, 21103001, 74588),
+(9967433, 21103023, 74586),
+(9967434, 21103017, 74587);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `client_table`
+--
+
+CREATE TABLE `client_table` (
+  `client_ID` int(8) DEFAULT NULL,
+  `client_name` varchar(8) DEFAULT NULL,
+  `age` int(2) DEFAULT NULL,
+  `phone_no` bigint(10) DEFAULT NULL,
+  `gender` varchar(1) DEFAULT NULL,
+  `address` varchar(80) DEFAULT NULL,
+  `profession` varchar(18) DEFAULT NULL,
+  `occasion` varchar(8) DEFAULT NULL,
+  `username` varchar(14) DEFAULT NULL,
+  `password` varchar(19) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `client_table`
+--
+
+INSERT INTO `client_table` (`client_ID`, `client_name`, `age`, `phone_no`, `gender`, `address`, `profession`, `occasion`, `username`, `password`) VALUES
+(21103001, 'Anujesh', 20, 6938182972, 'M', '101, Shankal Ind Est, Gogatewadi, Goregaon East, Mumbai, India', 'Software Developer', 'Birthday', 'anujesh12', 'movie@buff20#$'),
+(21103002, 'Nupur', 19, 6127922796, 'F', 'Dahanukar Wadi, Anandibai Keni Chawl, Link Road, Kandivali (west), Mumbai, India', 'Data Analyst', 'Wedding', 'nupurt19', 'toogood@surkhaab123'),
+(21103017, 'Atish', 20, 8169849870, 'M', '605 / 606, Samarpan Complex, New Link Road, Chakala, Andheri, Mumbai, India', 'Bussiness Analyst', 'Wedding', 'atish_mahali29', 'carislove69@&'),
+(21103023, 'Vanshika', 19, 6127906073, 'F', ' B-57, A K Vaidaya Marg, Goregaon, Mumbai, India', 'Software Developer', 'Farewell', 'vanshika221', 'gurgaon_me@heart#$');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `company_table`
+--
+
+CREATE TABLE `company_table` (
+  `comp_id` int(8) DEFAULT NULL,
+  `comp_name` varchar(15) DEFAULT NULL,
+  `comp_email` varchar(26) DEFAULT NULL,
+  `comp_website` varchar(23) DEFAULT NULL,
+  `comp_contact` bigint(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `company_table`
+--
+
+INSERT INTO `company_table` (`comp_id`, `comp_name`, `comp_email`, `comp_website`, `comp_contact`) VALUES
+(78443891, 'Food Fiesta', 'foodfiesta@hotmail.com', 'www.foodfiesta.in', 6127967684),
+(78443892, 'Delish Services', 'delish@gmail.com', 'www.delishmealbox.com', 8918129568),
+(78443893, 'Swagatam', 'swagatam@rediffmail.com', 'www.swagatambanquet.com', 8917683273),
+(78443894, 'Mandap', 'mandapservices@hotmail.com', 'www.mandapwedding.com', 6752913569);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `custom_booking`
+--
+
+CREATE TABLE `custom_booking` (
+  `cbid` int(5) DEFAULT NULL,
+  `cid` int(8) DEFAULT NULL,
+  `vid` int(8) DEFAULT NULL,
+  `did` int(8) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `custom_booking`
+--
+
+INSERT INTO `custom_booking` (`cbid`, `cid`, `vid`, `did`) VALUES
+(74586, 30015688, 40015601, 50016600),
+(74587, 30015692, 40015600, 50016602),
+(74588, 30015692, 40015600, 50016598);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `decoration`
+--
+
+CREATE TABLE `decoration` (
+  `decor_id` int(8) DEFAULT NULL,
+  `decor_name` varchar(16) DEFAULT NULL,
+  `decor_contact` bigint(10) DEFAULT NULL,
+  `decor_ratings` int(1) DEFAULT NULL,
+  `comp_id` int(8) DEFAULT NULL,
+  `decor_price` int(5) DEFAULT NULL,
+  `decor_review` varchar(212) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `decoration`
+--
+
+INSERT INTO `decoration` (`decor_id`, `decor_name`, `decor_contact`, `decor_ratings`, `comp_id`, `decor_price`, `decor_review`) VALUES
+(50016598, 'Paradise Gardens', 7817859346, 9, 78443892, 78000, '\"An absolutely stunning picture perfect venue with exceptional service. We booked them for my mehandi and wedding ceremony. Every single guest raved about how amazing both the functions were.\"'),
+(50016599, 'Big Orchids', 9817897164, 7, 78443893, 55000, '\"We had a really good experience with Big Orchids. In terms of decorations and venue, venue overall is very beautiful and perfect for destination wedding. Staff is also very friendly and catered to our requests.\"'),
+(50016600, 'The Golden Plaza', 9845562843, 8, 78443894, 75000, '\"Amazing venue,beautiful located in nature’s lap away from city chaos at the foothills\"'),
+(50016601, 'Atlantis', 9627918023, 6, 78443893, 40000, '\"Beautiful decor and great hospitality\"'),
+(50016602, 'Blue Fin', 9348939853, 7, 78443894, 65000, '\"We had a dream wedding at Blue Fin Resorts !! Full marks for superb location\"');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `venue`
+--
+
+CREATE TABLE `venue` (
+  `ven_id` int(8) DEFAULT NULL,
+  `ven_name` varchar(16) DEFAULT NULL,
+  `ven_contact` bigint(10) DEFAULT NULL,
+  `ven_ratings` int(1) DEFAULT NULL,
+  `comp_id` int(8) DEFAULT NULL,
+  `ven_price` int(5) DEFAULT NULL,
+  `ven_review` varchar(212) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `venue`
+--
+
+INSERT INTO `venue` (`ven_id`, `ven_name`, `ven_contact`, `ven_ratings`, `comp_id`, `ven_price`, `ven_review`) VALUES
+(40015598, 'Paradise Gardens', 7817859346, 9, 78443892, 78000, '\"An absolutely stunning picture perfect venue with exceptional service. We booked them for my mehandi and wedding ceremony. Every single guest raved about how amazing both the functions were.\"'),
+(40015599, 'Big Orchids', 9817897164, 7, 78443893, 55000, '\"We had a really good experience with Big Orchids. In terms of decorations and venue, venue overall is very beautiful and perfect for destination wedding. Staff is also very friendly and catered to our requests.\"'),
+(40015600, 'The Golden Plaza', 9845562843, 8, 78443894, 75000, '\"Amazing venue,beautiful located in nature’s lap away from city chaos at the foothills\"'),
+(40015601, 'Atlantis', 9627918023, 6, 78443893, 40000, '\"Beautiful decor and great hospitality\"'),
+(40015602, 'Blue Fin', 9348939853, 7, 78443894, 65000, '\"We had a dream wedding at Blue Fin Resorts !! Full marks for superb location\"');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
