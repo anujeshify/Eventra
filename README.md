@@ -105,7 +105,7 @@ The back end of Eventra is powered by the following technology:
 
 * **Anujesh Bansal** - *Initial work* - [anujeshify](https://github.com/anujeshify)
 * **Vanshika Gupta** - [VanshikaaGuptaa](https://github.com/VanshikaaGuptaa)
-* **Atish Ranjan Mahali** [atishmahali](https://github.com/atishmahali)
+* **Atish Ranjan Mahali** - [atishmahali](https://github.com/atishmahali)
 
 See also the list of [contributors](https://github.com/anujeshify/Eventra-An-Event-Management-System/graphs/contributors) who participated in this project.
 
